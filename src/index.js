@@ -5,8 +5,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
+import { createRequire } from 'module';
 
- 
+const require = createRequire(import.meta.url);
+
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer} >
